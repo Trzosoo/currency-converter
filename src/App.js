@@ -116,7 +116,8 @@ class App extends Component {
                       this.state.target
                     }`
                   : `${(
-                      this.state.amount * this.state.rates[this.state.target]
+                      this.state.amount * this.state.rates[this.state.target] ||
+                      this.state.amount
                     ).toFixed(2)} ${this.state.target}`}
               </h1>
             </div>
