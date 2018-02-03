@@ -49,11 +49,10 @@ class App extends Component {
   }
 
   handleSwitch() {
-    this.apiCall(api, this.state.target).then(() => {
-      const base = this.state.target;
-      const target = this.state.base;
-      this.setState({ base, target });
-    });
+    const base = this.state.target;
+    const target = this.state.base;
+    this.apiCall(api, base);
+    this.setState({ base, target });
   }
 
   handleAmountChange(event) {
